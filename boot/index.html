@@ -63,10 +63,21 @@ filter: sepia(0%) hue-rotate(-25deg) saturate(200%) opacity(100%);
         <li class="nav-item">
           <a class="nav-link" href="../index.html">Qué es esto</a>
         </li>
+        <li class="nav-btn">
+          <button type="button" class="btn btn-primary" onclick="invisible()">Invisible</button>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- BOTONERA OCULTAR NOTAS -->
+<div style="position: fixed; bottom: 70%; left: 0; z-index: 2;">
+<button style="margin: auto;" type="button" class="btn btn-primary" onclick="esconder()">
+  Esconder notas
+</button>
+</div>
+
 
 <!-- INTRO -->
 <section id="intro" style="background-color: #111;">
@@ -74,10 +85,10 @@ filter: sepia(0%) hue-rotate(-25deg) saturate(200%) opacity(100%);
   <div class="container">
     <div style="height: 90vh;" class="row justify-content-center  align-items-center">
         <div class="text-light" style="text-align: center;">
-          <h1 class="display-2">
+          <h1 id="nota" class="display-2">
           FUEGO Y PASION
         </h1>
-          <h2 class="display-5">
+          <h2 id="nota" class="display-5">
           un ensayo sobre lo que quema
         </h2>
       </div>
@@ -99,9 +110,9 @@ filter: sepia(0%) hue-rotate(-25deg) saturate(200%) opacity(100%);
       </div>
       <div class="col-sm-12 col-lg-4">
         <div class="p-5 text-light" style="position: relative;">
-          <p>Nueva Córdoba, invierno del 2020. Atardeció antes de tiempo. Todo se puso naranja de golpe, pero el sol estaba alto todavía. Me asomé al balcón y pude ver una especie de tormenta al oeste. Pero era humo. Las palomas, inquietas, hacían piruetas en las ráfagas de viento caliente que pasban entre los edificios.
+          <p id="nota" >Nueva Córdoba, invierno del 2020. Atardeció antes de tiempo. Todo se puso naranja de golpe, pero el sol estaba alto todavía. Me asomé al balcón y pude ver una especie de tormenta al oeste. Pero era humo. Las palomas, inquietas, hacían piruetas en las ráfagas de viento caliente que pasban entre los edificios.
           <br/><br/>Minutos más tarde comienzan a llegar mensajes de amigos de las sierras. El monte está ardiendo, otra vez.</p>
-          <a class="btn btn-primary" href="ramificado.html">Escenario ramificado</a>
+          <a type="button" class="btn btn-primary" href="ramificado.html">Escenario ramificado</a>
         </div>
       </div>
       <div class="col-sm-12 col-lg-4">
@@ -123,16 +134,17 @@ filter: sepia(0%) hue-rotate(-25deg) saturate(200%) opacity(100%);
       <div>
         <h2 class="display-3 text-light" style="text-align: center;">Montaje</h2>
         <br/>
-
       </div>
       <div class="col-sm-12 col-lg-4">
-        <div class="p-5 text-light" style="position: relative;">
+        <div id="bloque" class="p-5 text-light" style="position: relative;">
           <p>Aleksander Kluge decía que hay dos maneras de montar una película: como domador de circo o como jardinero.</p>
 <p>El domador toma el látigo y chasquea el aire con violencia, imponiéndole un límite a la bestia.</p>
 <p>El jardinero toma sus tijeras y delicadamente corta allí donde sabe que algo nuevo puede crecer.
 </p>
         </div>
+
         <audio controls autoplay style="position: static; top: 95%; z-index:1; width: 90%;">
+
           <source src="assets/compass.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -141,7 +153,30 @@ filter: sepia(0%) hue-rotate(-25deg) saturate(200%) opacity(100%);
 </div>
 </section>
 
-
+<!---FUNCIONES --->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script>
+    function invisible() {
+      var x = document.getElementById("nota");
+      if (x.style.visibility === "hidden") {
+        x.style.visibility = "visible";
+      } else {
+        x.style.visibility = "hidden";
+      }
+    }
+
+    function esconder() {
+      var x = document.getElementById("bloque");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+
+
+    </script>
   </body>
 </html>
