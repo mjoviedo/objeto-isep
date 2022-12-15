@@ -1,6 +1,13 @@
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.fondo {
   background-image: url("img/BOCETO01.png");
+}
+
+.invert {
+  style: invert(90%);
 }
 
 .sidenav {
