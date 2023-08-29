@@ -8,29 +8,50 @@
 </head>
 
 <body>
-<!-- MENU NAVEGACION
+<!-- MENU NAVEGACION  -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="lengua/index.html">Secuencia Lengua</a>
-  <a href="https://isep-cba.edu.ar/web/">Web de ISEP</a>
-  <a href="boot/index.html">Fuego y pasion</a>
+  <a href="#inicio">Inicio</a>
+  <a href="#clases">Web de ISEP</a>
+  <a href="#charlas">Fuego y pasion</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
- -->
+
   
 <!-- CONTENIDO -->
-<div class="container-lg">
-  <div class="row justify-content-center align-items-center">
-    <div style="height: 100vh;">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.420/build/spline-viewer.js"></script>
-<spline-viewer hint loading-anim url="https://prod.spline.design/ZM0tK65HFCxPtACL/scene.splinecode"></spline-viewer>
+  <div id="inicio" class="container-lg bg-primary">
+    <div class="row justify-content-center align-items-center">
+      <div style="height: 100vh;">
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.420/build/spline-viewer.js"></script>
+  <spline-viewer hint loading-anim url="https://prod.spline.design/ZM0tK65HFCxPtACL/scene.splinecode"></spline-viewer>
+      </div>
     </div>
   </div>
+
+  <div id="clases" class="container-lg bg-secondary">
+    <div class="row justify-content-center align-items-center">
+      <div style="height: 100vh;">
+        <h1>Clases</h1>
+        <p>Clase 1: Las computadoras de nuestro entorno: 
+          Se trabaja en la identificación de computadoras en el entorno de la vida cotidiana ampliando las ideas previas sobre la noción de computadora y redefiniendo este concepto a partir de la función que cumplen.
+          Clase 2: Datos entran, información sale.
+          Se trabaja en el reconocimiento de los procesos que realiza toda computadora: entrada, procesamiento y salida de datos.
+          </p>
+      </div>
+    </div>
   </div>
 
+  <div id="clases" class="container-lg bg-secondary">
+    <div class="row justify-content-center align-items-center">
+      <div style="height: 100vh;">
+        <h1>Charlas</h1>
+        <p>Se trabaja en la indagación y en la identificación de diferentes computadoras a lo largo de la historia para comprender cómo fueron evolucionando y que no siempre fueron como las conocemos actualmente ni tampoco los usos que se hacían de ellas.
+        </p>
+      </div>
+    </div>
+  </div>
 
-
-<script src="funciones.js"></script>
+  <script src="funciones.js"></script>
 
 </body>
 </html>
